@@ -2,15 +2,9 @@
 
 @import "tailwindcss";
 
+/* Tell Tailwind v4 where to scan for classes */
 @source "../app/**/*.{js,ts,jsx,tsx}";
 @source "../components/**/*.{js,ts,jsx,tsx}";
-
-/* LOI Zone brand green - matched to logo */
-:root {
-  --loi-green: #1e7e3e;
-  --loi-green-dark: #166130;
-  --loi-green-light: #edf7f0;
-}
 
 @layer base {
   *, *::before, *::after {
@@ -25,11 +19,13 @@
     background: #ffffff;
   }
 
+  /* FIXES BLUE LINKS */
   a {
     color: inherit;
     text-decoration: none;
   }
 
+  /* FIXES GIANT ICONS - prevents SVGs from expanding to full width */
   svg {
     display: inline-block;
     flex-shrink: 0;

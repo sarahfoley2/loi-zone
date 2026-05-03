@@ -66,57 +66,54 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative py-28 px-4 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, #edf7f0 0%, #c8e6d0 50%, #edf7f0 100%)' }}
-      >
-        {/* Decorative background blobs */}
-        <div className="absolute rounded-full opacity-10 pointer-events-none"
-          style={{ width: '500px', height: '500px', background: '#1e7e3e', top: '-150px', right: '-100px' }} />
-        <div className="absolute rounded-full opacity-10 pointer-events-none"
-          style={{ width: '350px', height: '350px', background: '#1e7e3e', bottom: '-120px', left: '-80px' }} />
-
-        {/* Logo with glow */}
-        <div className="flex justify-center mb-8 relative">
-          <div className="absolute rounded-full pointer-events-none"
-            style={{ width: '180px', height: '180px', background: 'rgba(30,126,62,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
-          <div className="rounded-full overflow-hidden relative"
-            style={{ width: '150px', height: '150px', border: '4px solid #1e7e3e', boxShadow: '0 8px 40px rgba(30,126,62,0.4)' }}>
-            <Image src="/loi-zone-logo.png" alt="LOI Zone Logo" width={150} height={150} className="w-full h-full object-cover" />
+      <section className="py-20 px-4 text-center" style={{ background: '#edf7f0' }}>
+        {/* Bigger logo */}
+        <div className="flex justify-center mb-8">
+          <div
+            className="rounded-full overflow-hidden shadow-lg"
+            style={{ width: '140px', height: '140px', border: '4px solid #1e7e3e' }}
+          >
+            <Image
+              src="/loi-zone-logo.png"
+              alt="LOI Zone Logo"
+              width={140}
+              height={140}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
-        {/* Title in Bebas Neue */}
+        {/* Title */}
         <h1
-          className="text-8xl md:text-9xl text-gray-900 mb-3 leading-none"
-          style={{ fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '0.05em' }}
+          className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-4 leading-tight"
+          style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           LOI Zone
         </h1>
 
-        {/* Green accent line */}
-        <div className="mx-auto mb-5 rounded-full" style={{ width: '64px', height: '4px', backgroundColor: '#1e7e3e' }} />
-
         {/* Subtitle */}
-        <p className="text-gray-600 text-base md:text-lg mb-10 max-w-md mx-auto leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-          It&apos;s not what Irish football can do for you, but what you can do for Irish football 🍀
+        <p className="text-gray-500 text-lg mb-10 max-w-xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          Its not what Irish football can do for you, but what you can do for Irish football
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/blog"
-            className="font-bold px-9 py-3.5 rounded-xl text-sm inline-flex items-center gap-2 text-white shadow-lg hover:opacity-90 transition-opacity"
+            className="font-semibold px-8 py-3 rounded-xl transition-colors text-sm inline-flex items-center gap-2 text-white"
             style={{ backgroundColor: '#1e7e3e', fontFamily: 'DM Sans, sans-serif' }}
           >
             Latest Posts →
           </Link>
           <Link
             href="/league-tables"
-            className="font-bold px-9 py-3.5 rounded-xl text-sm inline-flex items-center gap-2 text-gray-800 bg-white hover:shadow-md transition-shadow"
-            style={{ border: '2px solid #cbd5e1', fontFamily: 'DM Sans, sans-serif' }}
+            className="font-semibold px-8 py-3 rounded-xl transition-colors text-sm inline-flex items-center gap-2 text-gray-800 bg-white"
+            style={{ border: '2px solid #d1d5db', fontFamily: 'DM Sans, sans-serif' }}
           >
-            🏆 View Tables
+            View Tables
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872" />
+            </svg>
           </Link>
         </div>
       </section>

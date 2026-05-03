@@ -1,16 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
 
-@import "tailwindcss";
-
-@source "../app/**/*.{js,ts,jsx,tsx}";
-@source "../components/**/*.{js,ts,jsx,tsx}";
-
-/* LOI Zone brand green - matched to logo */
-:root {
-  --loi-green: #1e7e3e;
-  --loi-green-dark: #166130;
-  --loi-green-light: #edf7f0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   *, *::before, *::after {
@@ -25,13 +17,15 @@
     background: #ffffff;
   }
 
+  /* FIXES BLUE LINKS */
   a {
     color: inherit;
     text-decoration: none;
   }
 
+  /* FIXES GIANT ICONS */
   svg {
-    display: inline-block;
+    display: block;
     flex-shrink: 0;
   }
 

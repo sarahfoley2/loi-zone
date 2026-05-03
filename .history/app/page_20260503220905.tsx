@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import NewsletterSignup from '@/components/NewsletterSignup';
 
 const featuredPosts = [
@@ -35,7 +34,7 @@ const features = [
     description: 'Stay updated with the latest news, match reports, and in-depth analysis from across the League of Ireland.',
     href: '/blog',
     icon: (
-      <svg className="w-8 h-8" style={{ color: '#1e7e3e' }} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <svg className="w-8 h-8 text-[#16a34a]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
       </svg>
     ),
@@ -45,7 +44,7 @@ const features = [
     description: 'Browse our extensive collection of match photos, player portraits, and memorable moments.',
     href: '/gallery',
     icon: (
-      <svg className="w-8 h-8" style={{ color: '#1e7e3e' }} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <svg className="w-8 h-8 text-[#16a34a]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
       </svg>
     ),
@@ -55,7 +54,7 @@ const features = [
     description: 'Track the latest standings, statistics, and results from both divisions of the League of Ireland.',
     href: '/league-tables',
     icon: (
-      <svg className="w-8 h-8" style={{ color: '#1e7e3e' }} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <svg className="w-8 h-8 text-[#16a34a]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
       </svg>
     ),
@@ -66,63 +65,24 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative py-28 px-4 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, #edf7f0 0%, #c8e6d0 50%, #edf7f0 100%)' }}
-      >
-        {/* Decorative background blobs */}
-        <div className="absolute rounded-full opacity-10 pointer-events-none"
-          style={{ width: '500px', height: '500px', background: '#1e7e3e', top: '-150px', right: '-100px' }} />
-        <div className="absolute rounded-full opacity-10 pointer-events-none"
-          style={{ width: '350px', height: '350px', background: '#1e7e3e', bottom: '-120px', left: '-80px' }} />
-
-        {/* Logo with glow */}
-        <div className="flex justify-center mb-8 relative">
-          <div className="absolute rounded-full pointer-events-none"
-            style={{ width: '180px', height: '180px', background: 'rgba(30,126,62,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
-          <div className="rounded-full overflow-hidden relative"
-            style={{ width: '150px', height: '150px', border: '4px solid #1e7e3e', boxShadow: '0 8px 40px rgba(30,126,62,0.4)' }}>
-            <Image src="/loi-zone-logo.png" alt="LOI Zone Logo" width={150} height={150} className="w-full h-full object-cover" />
-          </div>
-        </div>
-
-        {/* Title in Bebas Neue */}
-        <h1
-          className="text-8xl md:text-9xl text-gray-900 mb-3 leading-none"
-          style={{ fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '0.05em' }}
-        >
-          LOI Zone
+      <section className="bg-[#16a34a] text-white py-24 px-4 text-center">
+        <h1 className="text-6xl md:text-8xl mb-5 text-white">
+          Welcome to LOI.ZONE
         </h1>
-
-        {/* Green accent line */}
-        <div className="mx-auto mb-5 rounded-full" style={{ width: '64px', height: '4px', backgroundColor: '#1e7e3e' }} />
-
-        {/* Subtitle */}
-        <p className="text-gray-600 text-base md:text-lg mb-10 max-w-md mx-auto leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-          It&apos;s not what Irish football can do for you, but what you can do for Irish football 🍀
+        <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          Your home for League of Ireland football – news, analysis, photos, and all the latest from Irish football
         </p>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/blog"
-            className="font-bold px-9 py-3.5 rounded-xl text-sm inline-flex items-center gap-2 text-white shadow-lg hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#1e7e3e', fontFamily: 'DM Sans, sans-serif' }}
-          >
-            Latest Posts →
-          </Link>
-          <Link
-            href="/league-tables"
-            className="font-bold px-9 py-3.5 rounded-xl text-sm inline-flex items-center gap-2 text-gray-800 bg-white hover:shadow-md transition-shadow"
-            style={{ border: '2px solid #cbd5e1', fontFamily: 'DM Sans, sans-serif' }}
-          >
-            🏆 View Tables
-          </Link>
-        </div>
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 bg-white text-[#16a34a] font-semibold px-8 py-3 rounded-xl hover:bg-green-50 transition-colors text-sm"
+          style={{ fontFamily: 'DM Sans, sans-serif' }}
+        >
+          Read Latest Posts →
+        </Link>
       </section>
 
       {/* Feature Cards */}
-      <section className="bg-white py-16 px-4">
+      <section className="bg-[#f0fdf4] py-16 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((f) => (
             <Link
@@ -130,14 +90,14 @@ export default function HomePage() {
               href={f.href}
               className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col gap-3"
             >
-              <div style={{ width: '32px', height: '32px' }}>{f.icon}</div>
+              <div className="w-8 h-8">{f.icon}</div>
               <p className="font-bold text-gray-900 text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 {f.title}
               </p>
               <p className="text-gray-500 text-sm leading-relaxed flex-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 {f.description}
               </p>
-              <span className="text-sm font-semibold" style={{ color: '#1e7e3e', fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#16a34a] text-sm font-semibold" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Learn more →
               </span>
             </Link>
@@ -146,15 +106,11 @@ export default function HomePage() {
       </section>
 
       {/* Featured Posts */}
-      <section className="py-16 px-4" style={{ background: '#f9fafb' }}>
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-4xl text-gray-900">Featured Posts</h2>
-            <Link
-              href="/blog"
-              className="text-sm font-semibold hover:underline"
-              style={{ color: '#1e7e3e', fontFamily: 'DM Sans, sans-serif' }}
-            >
+            <Link href="/blog" className="text-[#16a34a] text-sm font-semibold hover:underline" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               View all posts →
             </Link>
           </div>
@@ -175,26 +131,18 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-gray-400 text-xs" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                      {post.date}
-                    </span>
-                    <span
-                      className="text-xs font-semibold px-2 py-0.5 rounded-full"
-                      style={{ background: '#edf7f0', color: '#1e7e3e', fontFamily: 'DM Sans, sans-serif' }}
-                    >
+                    <span className="text-gray-400 text-xs" style={{ fontFamily: 'DM Sans, sans-serif' }}>{post.date}</span>
+                    <span className="text-xs bg-[#f0fdf4] text-[#16a34a] font-semibold px-2 py-0.5 rounded-full" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                       {post.category}
                     </span>
                   </div>
-                  <p
-                    className="font-bold text-base mb-2 leading-snug text-gray-900 group-hover:text-[#1e7e3e] transition-colors"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
-                  >
+                  <p className="font-bold text-base mb-2 leading-snug text-gray-900 group-hover:text-[#16a34a] transition-colors" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     {post.title}
                   </p>
                   <p className="text-gray-500 text-sm mb-3 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     {post.excerpt}
                   </p>
-                  <span className="text-sm font-semibold" style={{ color: '#1e7e3e', fontFamily: 'DM Sans, sans-serif' }}>
+                  <span className="text-[#16a34a] text-sm font-semibold" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     Read more →
                   </span>
                 </div>
